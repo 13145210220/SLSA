@@ -43,12 +43,20 @@ if you will be running it on Raspberry Pi.
 You will also need latest [NPM](https://www.npmjs.com/) that is internally required to build the web parts of the software.
 
 ```
-
+#安装net8.0 安装脚本
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+#赋予可执行权限
 chmod +x ./dotnet-install.sh
+#运行安装工具
 ./dotnet-install.sh
+#安装环境变量
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+#拉取库文件
 git clone https://github.com/13145210220/SLSA.git
+#跳转到目标文件夹
 cd SLSA/SLS4All.Compact.PrinterApp
+#执行编译程序
 dotnet build -c Release
 dotnet publish -c Release -r linux-arm64 --self-contained
 
