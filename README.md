@@ -52,7 +52,8 @@ cd SLSA/SLS4All.Compact.PrinterApp
 dotnet build -c Release
 dotnet publish -c Release -r linux-arm64 --self-contained
 
-cd bin\Release\net8.0\linux-arm64\publish
+cd  /SLSA/SLS4All.Compact.PrinterApp/bin/Release/net8.0/linux-arm64/publish/
+./SLS4All.Compact.PrinterApp --environment Development
 
 # contents of current directory should be copied 
 # to the embedded (or development) computer, properly configured and
