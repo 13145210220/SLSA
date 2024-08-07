@@ -44,7 +44,7 @@ You will also need latest [NPM](https://www.npmjs.com/) that is internally requi
 
 ```
 git clone https://github.com/13145210220/SLSA.git
-cd SLS4All.Compact/SLS4All.Compact.PrinterApp
+cd SLSA/SLS4All.Compact.PrinterApp
 dotnet build -c Release
 dotnet publish -c Release -r linux-arm64 --self-contained
 
