@@ -43,6 +43,11 @@ if you will be running it on Raspberry Pi.
 You will also need latest [NPM](https://www.npmjs.com/) that is internally required to build the web parts of the software.
 
 ```
+#更新软件包索引
+sudo apt update && sudo apt upgrade  
+#安装Node.js和NPM：
+sudo apt install nodejs npm
+
 #安装net8.0 安装脚本
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 #赋予可执行权限
@@ -59,20 +64,21 @@ cd SLSA/SLS4All.Compact.PrinterApp
 #执行编译程序
 dotnet build -c Release
 dotnet publish -c Release -r linux-arm64 --self-contained
-
+#进入目标文件夹
 cd  /SLSA/SLS4All.Compact.PrinterApp/bin/Release/net8.0/linux-arm64/publish/
+#启动软件
 ./SLS4All.Compact.PrinterApp --environment Development
 
-# contents of current directory should be copied 
-# to the embedded (or development) computer, properly configured and
-# started using helper script, but at minimum by for example:
+# 当前目录的内容应该被复制 
+# 正确地配置并复制到嵌入式（或开发用）计算机上
+# 使用辅助脚本启动，但至少要通过例如以下方式：
 # ./SLS4All.Compact.PrinterApp --environment Development
 #
-# You should then open browser (preferably Chromium) to the computer 
-# where the software is running. Typical address is either 
-# http://localhost:5000 or just http://localhost
-# depending on configuration. Please replace `localhost` with
-# any other address the computer with the software has.
+# 然后你应该在那台计算机上打开浏览器（最好是Chromium）。
+# 软件运行的那台计算机上。典型的地址是
+# http://localhost:5000 或者 http://localhost
+# 根据配置，请将 localhost 替换为
+# 软件所在计算机的任何其他地址。
 ```
 
 ## PrinterApp system dependencies
