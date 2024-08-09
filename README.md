@@ -24,10 +24,8 @@ NuGet 包源的路径为 https://nuget.pkg.github.com/sls4all/index.json.
 请注意，GitHub [目前需要](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-with-a-personal-access-token) 
 已注册的 GitHub 帐户和关联的令牌才能下载 NuGet 包，即使包标记为公共也是如此。 
 
-GitHub package source has a limitation that it requires authentification even for public packages like ours. 
-You will need a registered GitHub account, generate a [personal access token (PAT)](https://github.com/settings/tokens/new) 
-with at least a *read:packages* permission and use your e-mail and the generated 
-token as a password to pull the packages and build the project.
+GitHub 包源有一个限制，即使对于像我们这样的公共包，它也需要身份验证。 您将需要一个已注册的 GitHub 帐户，生成一个至少具有 read：packages 权限 [个人访问令牌 (PAT)](https://github.com/settings/tokens/new) 
+并使用您的电子邮件和生成的 token 作为密码来拉取包并构建项目。.
 
 [完整的 GitHub NuGet 包文档。](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry)
 
