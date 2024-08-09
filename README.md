@@ -102,28 +102,12 @@ sudo apt-get install -y \
 ```
 
 # Klipper firmware
-For running the software during development no other hardware components are neccessary.
-*Fake* (testing) implementations are available for most of the interfaces. However for actual 
-printing it is expected to connect the *SLS4All Compact* software with other SW and HW components 
-running Klipper MCU Firmware.
+为了在开发过程中运行软件，不需要其他硬件组件。虚假（测试）实现可用于大多数接口。但是，对于实际 打印时，预计将 SLS4All Compact 软件与其他软件和硬件组件连接起来 运行 Klipper MCU 固件。
 
-Typical setup is that *SLS4All Compact* software runs on Raspberry Pi embedded computer, 
-with it there also runs a Klipper MCU Linux host process (*SLS4All Compact* will start it 
-itself if configured) and also there would be one or two additional HW boards 
-(Bigtreetech SKR and Arduino board) for controlling the other HW parts. All these additional HW 
-and SW components are expected to run Klipper MCU Firmware and be connected to the embedded 
-computer (preferably via USB).
+典型的设置是 SLS4All Compact 软件在 Raspberry Pi 嵌入式计算机上运行， 使用它还可以运行Klipper MCU Linux主机进程（SLS4All Compact将启动它 如果已配置，则自身），并且还会有一个或两个额外的硬件板 （Bigtreetech SKR 和 Arduino 板）用于控制其他硬件部件。所有这些额外的硬件 软件组件预计将运行 Klipper MCU 固件并连接到嵌入式 计算机（最好通过 USB）。
 
-We have made modifications to *Klipper* sources and these are made available separately
-on our [GitHub](https://github.com/sls4all/SLS4All.Compact.Klipper). Please note that some 
-of our modifications are HW specific. We currently support *Klipper* firmware running
-on HW metioned above, i.e. Linux Host, Bigtreetech SKR v1.4 TURBO, and Arduino Nano.
+我们对 Klipper 源进行了修改，这些修改是单独提供的 在我们的 GitHub 上。请注意，一些 我们的修改是特定于硬件的。我们目前支持Klipper固件运行 在上面提到的硬件上，即 Linux 主机、Bigtreetech SKR v1.4 TURBO 和 Arduino Nano。
 
-Please also note that *SLS4All Compact* does not utilize Klipper Python implementation, 
-only the Klipper MCU Firmware. In *Klipper* sources that corresponds to 
-[src](https://github.com/sls4all/SLS4All.Compact.Klipper/tree/master/src) 
-subdirectory (i.e. we do not utilize contents of 
-[klippy](https://github.com/sls4all/SLS4All.Compact.Klipper/tree/master/klippy) directory).
+另请注意，SLS4All Compact 不使用 Klipper Python 实现， 仅 Klipper MCU 固件。在 Klipper 源中，对应于 src 子目录（即我们不使用 klippy 目录的内容）。
 
-We would like to thank Kevin O'Connor and all other [Klipper](https://www.klipper3d.org/) authors 
-and maintainers.
+我们要感谢 Kevin O'Connor 和所有其他 Klipper 作者 和维护者。
