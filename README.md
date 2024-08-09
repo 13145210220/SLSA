@@ -17,30 +17,26 @@ and provide access to the modified source.
 >We are not responsible for any damages, injuries, etc. caused in connection with the software. By exercising any right granted under the License, you irrevocably accept all its terms and conditions.
 
 ## NuGet packages
-SLS4All NuGet packages for parts that have not yet been open-sourced are published on GitHub package source.
-These NuGet packages are referenced from the projects present in this repository.
-Path to NuGet package source is https://nuget.pkg.github.com/sls4all/index.json.
-This source should already be configured in nuget.config in the root of this repository. 
-Please note that GitHub [currently requires](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-with-a-personal-access-token) a registered GitHub account and associated token to download NuGet packages, even if the packages are marked public. 
+SLS4尚未开源的部件的所有 NuGet 包都发布在 GitHub 包源上。
+这些 NuGet 包是从此存储库中存在的项目中引用的。
+NuGet 包源的路径为 https://nuget.pkg.github.com/sls4all/index.json.
+此源应已在此存储库根目录的 nuget.config 中配置。
+请注意，GitHub [目前需要](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-with-a-personal-access-token) 
+已注册的 GitHub 帐户和关联的令牌才能下载 NuGet 包，即使包标记为公共也是如此。 
 
 GitHub package source has a limitation that it requires authentification even for public packages like ours. 
 You will need a registered GitHub account, generate a [personal access token (PAT)](https://github.com/settings/tokens/new) 
 with at least a *read:packages* permission and use your e-mail and the generated 
 token as a password to pull the packages and build the project.
 
-[Full GitHub NuGet packages documentation.](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry)
+[完整的 GitHub NuGet 包文档。](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry)
 
 ## Building
-All sources in this repository are compilable using [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). 
-We recommend free [Visual Studio Community](https://visualstudio.microsoft.com/cs/vs/community/) for development. Suggested minumum workloads when installing Visual Studio are: 
-.NET desktop development, ASP.NET and web development, Node.js development.
+此存储库中的所有源都可以使用 .NET 8.0 SDK 进行编译。 建议使用免费的 Visual Studio Community 进行开发。安装 Visual Studio 时建议的最小工作负载为： .NET 桌面开发、ASP.NET 和 Web 开发、Node.js开发。
 
-Since the host *SLS4All Compact* software is intended to be run on embedded computer, like Raspberry Pi 5,
-the following code will clone the repository and build the software for `linux-arm64` platform (you can build it on any OS supporting .NET SDK, including Windows and non ARM Linux). 
-64-bit OS with at least 4GB RAM for running the compiled software is very strongly recommended. That means you should use 64-bit variant of Raspberry Pi OS (formerly Raspbian) 
-if you will be running it on Raspberry Pi.
+由于主机 SLS4All Compact 软件旨在在嵌入式计算机上运行，例如 Raspberry Pi 5， 以下代码将克隆存储库并为平台构建软件（您可以在任何支持 .NET SDK 的操作系统上构建它，包括 Windows 和非 ARM Linux）。 强烈建议使用至少 4GB RAM 的 64 位操作系统来运行编译软件。这意味着您应该使用 Raspberry Pi OS（以前称为 Raspbian）的 64 位变体 如果您将在 Raspberry Pi 上运行它。linux-arm64
 
-You will also need latest [NPM](https://www.npmjs.com/) that is internally required to build the web parts of the software.
+您还需要最新的 NPM，这是构建软件的 Web 部件在内部所必需的
 
 ```
 #更新软件包索引
@@ -83,9 +79,9 @@ cd  /SLSA/SLS4All.Compact.PrinterApp/bin/Release/net8.0/linux-arm64/publish/
 
 ## PrinterApp system dependencies
 
-There are some dependencies for full functionality of the compiled software and bundled scripts running on the embedded PC.
+在嵌入式 PC 上运行的编译软件和捆绑脚本的全部功能存在一些依赖性。
 
-If the embedded PC is Raspberry PI 5 with Raspberry PI OS, these can be installed using:
+如果嵌入式 PC 是带有 Raspberry PI OS 的 Raspberry PI 5，则可以使用以下方法进行安装：
 
 ```
 sudo apt-get update
