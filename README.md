@@ -57,7 +57,7 @@ dotnet publish -c Release -r linux-arm64 --self-contained
 cd  /SLSA/SLS4All.Compact.PrinterApp/bin/Release/net8.0/linux-arm64/publish/
 #启动软件
 ./SLS4All.Compact.PrinterApp --environment Development
-
+./SLS4All.Compact.PrinterApp --environment Inova-RaspberryPi5
 # 当前目录的内容应该被复制 
 # 正确地配置并复制到嵌入式（或开发用）计算机上
 # 使用辅助脚本启动，但至少要通过例如以下方式：
